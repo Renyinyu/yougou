@@ -1,0 +1,19 @@
+page, view, text, swiper, swiper-item, image, navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #f6f6f6;
+  /*
+    主题颜色
+  */
+  --themeColor: #eb4450;
+  --whiteColor: #fff;
+  --grayColor: #666;
+  /* 字体 */
+  font-size: 28rpx;
+  /* 圆角 */
+  --borderRadiusBase: 8rpx;
+}

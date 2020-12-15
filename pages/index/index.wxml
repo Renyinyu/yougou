@@ -1,0 +1,43 @@
+<view class="home">
+  <SearchInput></SearchInput>
+
+  <swiper class="home-swiper" autoplay indicator-dots circular>
+    <block wx:for="{{banners}}" wx:key="goods_id">
+      <swiper-item>
+        <navigator>
+          <image src="{{ item.image_src }}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="home-navigator">
+    <block wx:for="{{navigators}}" wx:key="name">
+      <navigator>
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </block>
+  </view>
+  <view class="home-categories">
+    <block wx:for="{{categories}}" wx:key="index">
+      <view class="home-categories-item">
+        <image src="{{ item.floor_title.image_src }}" mode="widthFix"></image>
+        <view class="home-categories-item-content">
+          <view class="home-categories-item-content-left">
+            <image src="{{item.product_list[0].image_src}}" mode="widthFix"></image>
+          </view>
+          <view class="home-categories-item-content-right">
+            <block
+                 wx:for="{{item.product_list}}" 
+                wx:key="name" 
+                wx:for-item="product" 
+            >
+              <image wx:if="{{index !== 0}}" src="{{product.image_src}}"></image>
+            </block>
+
+          </view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+</view>

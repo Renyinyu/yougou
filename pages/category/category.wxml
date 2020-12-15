@@ -1,0 +1,26 @@
+<view class="category">
+  <SearchInput></SearchInput>
+  <view class="category-container">
+      <scroll-view class="aside" scroll-y>
+        <view 
+          class="aside-item {{ item.cat_id === activeAsideItem.cat_id ? 'active' : '' }}" 
+          wx:for="{{ asideData }}" 
+          wx:key="cat_id"
+          bindtap="handleAsideItemClick"
+          data-item="{{item}}"
+        >
+            {{ item.cat_name }}
+          </view>
+      </scroll-view>
+    <scroll-view class="main" scroll-y>
+      <view class="sub-category" wx:for="{{ activeAsideItem.children }}" >
+        <view class="sub-category-title">{{ item.cat_name }}</view>
+        <!-- <view class="sub-category-goods">
+          <navigator>
+            <image ></image>
+          </navigator>
+        </view> -->
+      </view>
+    </scroll-view>
+  </view>
+</view>
