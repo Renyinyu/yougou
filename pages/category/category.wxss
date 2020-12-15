@@ -30,3 +30,30 @@ page {
 .main {
   flex: 1;
 }
+
+.sub-category {
+  text-align: center;
+}
+
+.sub-category-title {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-category-title::before, .sub-category-title::after {
+  content: '/'
+}
+
+.sub-category-goods {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-category-goods > navigator {
+  flex: 0 0 33.33%;
+  padding: 30rpx;
+  font-size: 20rpx;
+}
+

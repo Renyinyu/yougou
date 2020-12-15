@@ -17,3 +17,7 @@ page {
   /* 圆角 */
   --borderRadiusBase: 8rpx;
 }
+
+image {
+  width: 100%;
+}
