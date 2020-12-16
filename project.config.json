@@ -66,6 +66,12 @@
           "pathName": "pages/category/category",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/goodsList/goodsList",
+          "query": "cid=5",
+          "scene": null
         }
       ]
     }
