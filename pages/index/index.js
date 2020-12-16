@@ -17,7 +17,7 @@ Page({
    */
   fetchBannerData () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'
+      url: '/home/swiperdata'
     }).then(banner => {
       this.setData({ banners: banner.message })
     })
@@ -28,7 +28,7 @@ Page({
    */
   fetchCategoryData () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata'
+      url: '/home/floordata'
     }).then(data => {
       console.log(data.message, 'data')
       this.setData({
@@ -43,7 +43,7 @@ Page({
    */
   fetchNavigatorData () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems'
+      url: '/home/catitems'
     }).then(navigaor => {
       this.setData({ navigators: navigaor.message })
     })

@@ -12,11 +12,11 @@
             {{ item.cat_name }}
           </view>
       </scroll-view>
-    <scroll-view class="main" scroll-y>
+    <scroll-view class="main" scroll-y scroll-top="{{ mainScrollTop }}">
       <view class="sub-category" wx:for="{{ activeAsideItem.children }}" wx:key="cat_id">
         <view class="sub-category-title">{{ item.cat_name }}</view>
         <view class="sub-category-goods">
-          <navigator wx:for="{{ item.children }}" wx:key="cat_id" wx:for-item="child">
+          <navigator url="/pages/goodsList/goodsList?cid={{child.cat_id}}" wx:for="{{ item.children }}" wx:key="cat_id" wx:for-item="child">
             <image src="{{ child.cat_icon }}" mode="widthFix"></image>
             <text>{{ child.cat_name }}</text>
           </navigator>

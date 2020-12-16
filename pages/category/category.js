@@ -7,7 +7,8 @@ Page({
    */
   data: {
     asideData: [],
-    activeAsideItem: null
+    activeAsideItem: null,
+    mainScrollTop: 0
   },
 
   /**
@@ -33,7 +34,7 @@ Page({
    */
   fetchGoodsCategory () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories'
+      url: '/categories'
     }).then(data => {
       wx.setStorage({
         data: {time: Date.now(), data: data.message},
@@ -51,7 +52,8 @@ Page({
    */
   handleAsideItemClick (e) {
     this.setData({
-      activeAsideItem: e.currentTarget.dataset.item
+      activeAsideItem: e.currentTarget.dataset.item,
+      mainScrollTop: 0
     })
   }
 })

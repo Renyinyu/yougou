@@ -29,6 +29,7 @@ page {
 
 .main {
   flex: 1;
+  background-color: var(--whiteColor)
 }
 
 .sub-category {
