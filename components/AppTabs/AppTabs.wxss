@@ -1,47 +1,25 @@
 .app-tabs {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-=======
   /* border: 1px solid red; */
->>>>>>> fc350960b6cb54b9d2cbcb62e69d366803235705
 }
 
 .app-tabs-list {
   display: flex;
-<<<<<<< HEAD
-=======
   width: 100%;
->>>>>>> fc350960b6cb54b9d2cbcb62e69d366803235705
   border-bottom: 1px solid #eee;
   background-color: var(--whiteColor);
 }
 
 .app-tabs-item {
-<<<<<<< HEAD
-  padding: 20rpx 0;
-  box-sizing: border-box;
-  flex: 1;
-=======
   flex: 1;
   display: inline-block;
   padding: 20rpx 0;
->>>>>>> fc350960b6cb54b9d2cbcb62e69d366803235705
   text-align: center;
 }
 
 .app-tabs-item.active {
   color: var(--themeColor);
   border-bottom: 2px solid var(--themeColor);
-<<<<<<< HEAD
-}
-
-
-
-
-
-
-=======
   border-radius: 4rpx;
 }
->>>>>>> fc350960b6cb54b9d2cbcb62e69d366803235705
