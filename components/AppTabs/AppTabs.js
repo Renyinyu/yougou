@@ -4,24 +4,23 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    tabs: {
+      type: Array,
+      value: []
+    }
   },
 
   /**
    * 组件的初始数据
    */
-  data: {
-    tabs: [
-      {id: 1, title: 'tab 1'},
-      {id: 2, title: 'tab 2'},
-      {id: 3, title: 'tab 3'},
-    ]
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    handleTabClick (e) {
+      this.triggerEvent('clickTab', e.currentTarget.dataset.value)
+    }
   }
 })

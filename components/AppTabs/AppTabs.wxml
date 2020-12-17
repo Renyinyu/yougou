@@ -1,7 +1,7 @@
 <view class="app-tabs">
   <view class="app-tabs-list">
     <block wx:for="{{ tabs }}" wx:key="index">
-      <view class="app-tabs-item active">
+      <view class="app-tabs-item {{item.isActive ? 'active' : ''}}" bindtap="handleTabClick" data-value="{{item}}">
         {{ item.title }}
       </view>
     </block>
