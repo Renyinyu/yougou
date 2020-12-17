@@ -1,1 +1,30 @@
-/* pages/goodsList/goodsLiST.wxss */
+.goods-list-wrapper {
+}
+
+.goods-list-item {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  background-color: var(--whiteColor);
+}
+
+.goods-list-item-cover {
+  width: 180rpx;
+  max-height: 90px;
+}
+
+.goods-list-item-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.goods-list-item-description text {
+  font-size: 26rpx;
+  line-height: 1.25;
+  flex: 1;
+}
+
+.goods-list-item-description .price {
+  color: var(--themeColor);
+}

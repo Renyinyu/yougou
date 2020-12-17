@@ -1,2 +1,22 @@
-<!--pages/goodsList/goodsLiST.wxml-->
-<text>pages/goodsList/goodsLiST.wxml</text>
+<view class="goods-list">
+  <SearchInput></SearchInput>
+  <AppTabs tabs="{{tabs}}" bindclickTab="handleTabClick">
+    <block wx:if="{{tabValue===1}}">
+      <view class="goods-list-wrapper">
+        <block wx:for="{{ goodsList }}" wx:key="goods_id">
+          <view class="goods-list-item">
+            <view class="goods-list-item-cover">
+              <image src="{{item.goods_small_logo }}" mode="widthFix"></image>
+            </view>
+            <view class="goods-list-item-description">
+              <text>{{ item.goods_name }}</text>
+              <view class="price">￥{{ item.goods_price }}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+    <block wx:if="{{tabValue===2}}">2</block>
+    <block wx:if="{{tabValue===3}}">3</block>
+  </AppTabs>
+</view>
