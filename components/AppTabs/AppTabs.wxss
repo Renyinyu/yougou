@@ -1,0 +1,28 @@
+.app-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-tabs-list {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  background-color: var(--whiteColor);
+}
+
+.app-tabs-item {
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+}
+
+.app-tabs-item.active {
+  color: var(--themeColor);
+  border-bottom: 2px solid var(--themeColor);
+}
+
+
+
+
+
+

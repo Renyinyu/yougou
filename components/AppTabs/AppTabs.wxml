@@ -1,0 +1,10 @@
+<view class="app-tabs">
+  <view class="app-tabs-list">
+    <block wx:for="{{ tabs }}" wx:key="index">
+      <view class="app-tabs-item active">
+        {{ item.title }}
+      </view>
+    </block>
+  </view>
+  <slot></slot>
+</view>
