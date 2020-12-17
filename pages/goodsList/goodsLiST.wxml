@@ -4,15 +4,17 @@
     <block wx:if="{{tabValue===1}}">
       <view class="goods-list-wrapper">
         <block wx:for="{{ goodsList }}" wx:key="goods_id">
-          <view class="goods-list-item">
-            <view class="goods-list-item-cover">
-              <image src="{{item.goods_small_logo }}" mode="widthFix"></image>
+          <navigator url="/pages/goodsDetail/goodsDetail?goodsId={{item.goods_id}}">
+            <view class="goods-list-item">
+              <view class="goods-list-item-cover">
+                <image src="{{item.goods_small_logo }}" mode="widthFix"></image>
+              </view>
+              <view class="goods-list-item-description">
+                <text>{{ item.goods_name }}</text>
+                <view class="price">￥{{ item.goods_price }}</view>
+              </view>
             </view>
-            <view class="goods-list-item-description">
-              <text>{{ item.goods_name }}</text>
-              <view class="price">￥{{ item.goods_price }}</view>
-            </view>
-          </view>
+          </navigator>
         </block>
       </view>
     </block>
